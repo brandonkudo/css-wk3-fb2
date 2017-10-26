@@ -1,0 +1,267 @@
+$main-layout: (
+  columns: 5,
+  // gutter: 60px,
+);
+
+$content-layout: (
+  columns: 5,
+  gutter: 0,
+);
+
+body {
+  background-color: $gray;
+  margin: 0;
+  margin-top: 0;
+  box-sizing: border-box;
+  font-family: $helvetica;
+}
+
+a {
+  color: $blue;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  background-color: $blue;
+  color: white;
+  width: 100%;
+  // margin: 0 0 10px 0;
+  border-bottom: 1px solid $blue-dk;
+}
+
+.container {
+  @include grid-container;
+  max-width: 1050px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+form {
+  display: flex;
+  align-items: flex-end;
+  font-size: 12px;
+}
+
+.input-field {
+  line-height: 20px;
+  float: left;
+}
+
+input {
+  display: block;
+  margin-right: 10px;
+  border: 1px solid black;
+  height: 18px;
+}
+
+label {
+  display: block;
+  margin-right: 10px;
+}
+
+#forgot-account {
+  font-size: 12px;
+  color: #9DB3CC;
+}
+
+
+.column-one {
+  @include grid-column(1, $main-layout);
+  background-color: $gray;
+  margin-top: 10px;
+}
+
+.column-two {
+  @include grid-column(4, $main-layout);
+  @include grid-container;
+}
+
+.hero {
+  @include grid-column(5, $content-layout);
+  background-color: white;
+  width: 100%;
+  border: $border;
+  border-top: none;
+  border-bottom-left-radius: $radius;
+  border-bottom-right-radius: $radius;
+  margin-bottom: 10px;
+}
+
+.hero-img {
+  background-image: url("../img/cyberwomanhero.jpg");
+  background-size: cover;
+  min-height: 40vh;
+  }
+
+#hero-nav {
+  padding: 20px;
+
+}
+
+.sub-column-one {
+  @include grid-column(3, $content-layout);
+  background-color: white;
+  // margin: 4px 0 0 0;
+  overflow: hidden;
+  // width: 66%;
+  border-radius: $radius;
+  border: $border;
+  padding: 10px;
+}
+
+.sub-column-two {
+  @include grid-column(2, $content-layout);
+  margin: 0 -34px 0 0;
+  // width: 20%;
+  // clear: none;
+  // overflow: hidden;
+  float: right;
+  // width: 33%;
+  box-sizing: border-box;
+}
+
+.posts {
+  background-color: white;
+  border: 1px solid $gray-border;
+  border-bottom: none;
+  border-radius: $radius;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: 10px;
+  margin-left: 10px auto;
+  margin-right: 10px auto;
+  margin-bottom: 0;
+}
+
+#posts-title {
+  color: $black-lt;
+  font-weight: bold;
+}
+
+.post-header {
+  font-size: 14px;
+  display: flex;
+}
+
+.post-header-text {
+  padding: 5px;
+  line-height: 0;
+}
+
+.bold {
+  font-weight: bold;
+}
+.gray-text {
+  color: $gray-dk;
+}
+
+.date {
+  font-size: 12px;
+  color: $gray-dk;
+}
+
+.post-img {
+  width: 100%;
+}
+
+.post-text {
+  font-size: 14px;
+}
+
+.caption {
+  font-size: 12px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.like-comment {
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  color: $black-lt;
+  border-top: $border;
+}
+
+.comment-button {
+  margin-left: 20px;
+}
+
+.comments {
+  border: 1px solid $gray-border;
+  border-radius: $radius;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  background-color: $gray;
+  font-size: 12px;
+  margin-left: 5px auto;
+  margin-right: 5px auto;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.top-comments {
+  border-bottom: $border;
+}
+
+.shares {
+  padding-bottom: 5px;
+  border-bottom: $border;
+}
+
+.column-two-boxes {
+  @include grid-column(5, $main-layout);
+  background-color: white;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  box-sizing: border-box;
+  border-radius: $radius;
+  border: $border;
+  padding: 5px;
+}
+
+.article-section {
+  display: flex;
+  padding: 5px;
+}
+
+.article-text {
+  line-height: 2px;
+  padding: 5px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.related-pages-text {
+  font-size: 12px;
+  line-height: 0;
+  padding: 5px;
+}
+
+.also-like-section {
+  display: flex;
+  padding: 5px;
+  border-bottom: $border;
+}
+
+.also-like-section:last-child {
+  border-bottom: none;
+}
+
+.also-like-text {
+  font-size: 13px;
+  line-height: 1px;
+  padding: 5px;
+}
